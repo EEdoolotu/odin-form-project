@@ -3,6 +3,14 @@
     src: url("fonts/Norsebold.otf") format("opentype");
 }
 
+body, html {
+    margin : 0;
+    padding: 0;
+    height: 100%;
+    width : 100%;
+    overflow: hidden;
+}
+
 .container {
     display: flex;
     min-height: 100vh;
@@ -69,11 +77,20 @@
 }
 
 button {
-    margin-top: 100px;
+    margin-top: 70px;
     background-color: #596D48;
     color: white;
     padding: 15px 55px;
     font-size: large;
     border-radius: 8px;
     box-shadow: inset;
+}
+
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid red;
+}
+
+input:valid:not(:placeholder-shown) {
+    border: 2px solid green;
 }
